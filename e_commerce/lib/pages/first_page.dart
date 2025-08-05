@@ -1,5 +1,6 @@
+import 'package:e_commerce/components/bottom_navigation.dart';
 import 'package:flutter/material.dart';
-import 'package:e_commerce/pages/home_page.dart';
+import 'package:e_commerce/pages/shop_page.dart';
 import 'package:e_commerce/pages/cart.dart';
 
 
@@ -12,9 +13,21 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
+  // keeps track of the current page to display
+  int _selectedindex = 0;
+
+  // this method updates new selected page
+  void _navigateBottomBar(int index) {
+    setState(() {
+      _selectedindex = index;   
+    } 
+    );
+  }
+  
+  // The pages we have in our app
   final List _pages = [
     // Home Page
-    HomePage(),
+    ShopPage(),
 
     // Cart Page
     CartPage(),
@@ -23,24 +36,11 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar : AppBar (title: Text('first page')),
-      body: _pages[0],
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          // Home
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home'
-          ),     
-
-
-          // cart
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'cart'
-          )
-        ]
-        ), 
+       body: _pages[_selectedindex],
+       bottomNavigationBar: MyBottomNavBar(
+        onTabChange: _navigateBottomBar, // Pass the method to handle tab changes
+       ),
+       
     );
   }
 }
