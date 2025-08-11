@@ -36,11 +36,26 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: _pages[_selectedindex],
-       bottomNavigationBar: MyBottomNavBar(
-        onTabChange: _navigateBottomBar, // Pass the method to handle tab changes
-       ),
-       
+      body: Column(
+        children: [
+          Container(
+            height: kToolbarHeight,
+            padding: EdgeInsets.all(16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Hastens E-Commerce',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 24.0).copyWith(fontFamily: 'Roboto'),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Expanded(
+            child: _pages[_selectedindex],
+          ),
+        ],
+      ),
+      bottomNavigationBar: MyBottomNavBar(
+        onTabChange: _navigateBottomBar,
+      ),
     );
   }
 }
