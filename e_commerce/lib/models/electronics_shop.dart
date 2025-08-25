@@ -9,7 +9,7 @@ class ElectronicsShop extends ChangeNotifier {
       brand: 'Samsung',
       price: 400000.0,
       imagepath:
-     'https://example.com/smartphone.jpg',
+     '/workspaces/Hastens/e_commerce/assets/images/airpods.jpeg',
     ),
     
     Electronics(
@@ -17,21 +17,21 @@ class ElectronicsShop extends ChangeNotifier {
       brand: 'Dell',
       price: 800000.0,
       imagepath:
-          'https://example.com/laptop.jpg',
+          '/workspaces/Hastens/e_commerce/assets/images/black_power_bank.jpeg',
     ),
     Electronics(
       name: 'Headphones',
       brand: 'Sony',
       price: 150000.0,
       imagepath:
-          'https://example.com/headphones.jpg',
+          '/workspaces/Hastens/e_commerce/assets/images/black_usb.jpeg',
     ),
     Electronics(
       name: 'Smartwatch',
       brand: 'Apple',
       price: 300000.0,
       imagepath:
-          'https://example.com/smartwatch.jpg',
+          '/workspaces/Hastens/e_commerce/assets/images/headsets.jpeg',
     ),  
   ];
 
