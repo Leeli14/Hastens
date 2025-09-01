@@ -39,19 +39,23 @@ class _FirstPageState extends State<FirstPage> {
       body: Column(
         children: [
           Container(
-            height: kToolbarHeight,
+            height: 80.0,
+            width: double.infinity,
             padding: EdgeInsets.all(16.0),
             alignment: Alignment.centerLeft,
-            child: Text(
-              'Hastens E-Commerce',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 24.0).copyWith(fontFamily: 'Roboto'),
-              textAlign: TextAlign.left,
+            child: Image(
+              image: AssetImage('/workspaces/Hastens/e_commerce/assets/images/Nike_logo.png')
+              
+
+            
             ),
           ),
+          
+          
           Expanded(
             child: _pages[_selectedindex],
           ),
-        ],
+        ]
       ),
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: _navigateBottomBar,

@@ -11,7 +11,18 @@ class ShopPage extends StatelessWidget {
 
   // add to cart function
   void addItemToCart(BuildContext context, Electronics electronics) {
+    // add to cart function from provider
     Provider.of<ElectronicsShop>(context, listen: false).addItemToCart(electronics);
+  
+
+  // let the user know its been added
+ 
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Added to Cart!'),
+      )
+    );
   }
 
 

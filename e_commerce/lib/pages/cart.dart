@@ -22,6 +22,13 @@ class _CartPageState extends State<CartPage> {
     Provider.of<ElectronicsShop>(context, listen: false).removeItemFromCart(electronics);
   }
 
+  // pay now function
+  void payNow() {
+    // fill your payment service here
+    // for now just clear the cart
+    
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,8 +61,31 @@ class _CartPageState extends State<CartPage> {
                         icon: Icon(Icons.delete),
                       );
                     }),
+                ),
+
+                //pay button
+                GestureDetector(
+                  onTap: payNow,
+                  child: Container(
+                    padding: EdgeInsets.all(25.0),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(8.0)
+                      
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Pay Now',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )
+                      )
+                    ),
+                  
+                  ),
                 )
-              
             ]
           )
         ),

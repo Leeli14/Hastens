@@ -1,37 +1,46 @@
 import 'package:flutter/foundation.dart';
 import 'electronics.dart';
 
+
+
 class ElectronicsShop extends ChangeNotifier {
   //electronics for sale
   final List<Electronics> _shop = [
     Electronics(
-      name: 'SmartPhone',
-      brand: 'Samsung',
-      price: 400000.0,
+      name: 'Charger',
+      brand: '',
+      price: 40000.0,
       imagepath:
-     '/workspaces/Hastens/e_commerce/assets/images/airpods.jpeg',
+     '/workspaces/Hastens/e_commerce/assets/images/white_charger.jpeg',
     ),
     
     Electronics(
-      name: 'Laptop',
+      name: 'Power Bank',
       brand: 'Dell',
-      price: 800000.0,
+      price: 80000.0,
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/black_power_bank.jpeg',
     ),
     Electronics(
-      name: 'Headphones',
+      name: 'USB Cable',
       brand: 'Sony',
-      price: 150000.0,
+      price: 15000.0,
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/black_usb.jpeg',
     ),
     Electronics(
-      name: 'Smartwatch',
+      name: 'Headsets',
       brand: 'Apple',
       price: 300000.0,
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/headsets.jpeg',
+    ),
+    Electronics(
+      name: 'Airpods',
+      brand: 'Apple',
+      price: 250000.0,
+      imagepath:
+          '/workspaces/Hastens/e_commerce/assets/images/white_airpods.jpeg',
     ),  
   ];
 
