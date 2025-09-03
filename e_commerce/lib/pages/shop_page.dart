@@ -37,7 +37,7 @@ class ShopPage extends StatelessWidget {
               children: [
                 // Heading message
                 Text(
-                  'Shop',
+                  'Products',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 10),

@@ -1,0 +1,11 @@
+{
+    "postStartCommand": "flutter run -d web-server --web-port 4000 ",
+    "forwardPorts": [4000],
+    "portsAttributes": {
+        "4000": {
+            "label": "Hastens Web Server",
+            "onAutoForward": "notify",
+            "visibility": "public"
+        }
+    }
+}

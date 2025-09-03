@@ -9,7 +9,7 @@ class ElectronicsShop extends ChangeNotifier {
     Electronics(
       name: 'Charger',
       brand: '',
-      price: 40000.0,
+      productnumber: '12 products',
       imagepath:
      '/workspaces/Hastens/e_commerce/assets/images/white_charger.jpeg',
     ),
@@ -17,28 +17,28 @@ class ElectronicsShop extends ChangeNotifier {
     Electronics(
       name: 'Power Bank',
       brand: 'Dell',
-      price: 80000.0,
+      productnumber: '8 products',
       imagepath:
-          '/workspaces/Hastens/e_commerce/assets/images/black_power_bank.jpeg',
+          '/workspaces/Hastens/e_commerce/assets/images/white_power_bank.png',
     ),
     Electronics(
       name: 'USB Cable',
       brand: 'Sony',
-      price: 15000.0,
+      productnumber: '8 products',
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/black_usb.jpeg',
     ),
     Electronics(
       name: 'Headsets',
       brand: 'Apple',
-      price: 300000.0,
+      productnumber: '10 products',
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/headsets.jpeg',
     ),
     Electronics(
       name: 'Airpods',
       brand: 'Apple',
-      price: 250000.0,
+      productnumber: '5 products',
       imagepath:
           '/workspaces/Hastens/e_commerce/assets/images/white_airpods.jpeg',
     ),  
