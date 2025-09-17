@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
 import '../models/product.dart';
 import '../providers/favorites_provider.dart';
+import '../utils/currency_formatter.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -27,7 +28,7 @@ class ProductCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(product.name, textAlign: TextAlign.center),
           ),
-          Text("Rs ${product.price.toStringAsFixed(0)}",
+          Text(CurrencyFormatter.format(product.price),
               style: const TextStyle(color: Colors.green)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

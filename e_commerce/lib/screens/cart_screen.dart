@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
+import '../utils/currency_formatter.dart';
 
 
 class CartScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class CartScreen extends StatelessWidget {
                       return ListTile(
                         leading: Image.asset(product.image, width: 40),
                         title: Text(product.name),
-                        subtitle: Text("Rs ${product.price} x $qty"),
+                        subtitle: Text("${CurrencyFormatter.format(product.price)} x $qty"),
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
@@ -52,7 +53,7 @@ class CartScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      Text("Total: Rs ${cart.totalPrice.toStringAsFixed(0)}",
+                      Text("Total: ${CurrencyFormatter.format(cart.totalPrice)}",
                           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 8),
                       ElevatedButton(

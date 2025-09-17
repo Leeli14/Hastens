@@ -6,6 +6,7 @@ class AppTheme{
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.grey[100],
     cardColor: Colors.white,
+    iconTheme: IconThemeData(color: Colors.black),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
@@ -18,10 +19,12 @@ class AppTheme{
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.grey[900],
     cardColor: Colors.grey[800],
+    iconTheme: IconThemeData(color: Colors.white),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.grey[900],
       foregroundColor: Colors.white,
       elevation: 0,
+
     ),
   );
 }

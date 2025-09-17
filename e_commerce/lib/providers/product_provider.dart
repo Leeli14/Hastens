@@ -9,7 +9,7 @@ class ProductProvider extends ChangeNotifier {
       image: "assets/images/earbuds.png",
       products: [
         Product(name: "Bass Earbuds", price: 2500, image: "assets/images/earbuds.png"),
-        Product(name: "Pro Earbuds", price: 3200, image: "assets/images/earbuds.png"),
+        Product(name: "Pro Earbuds", price: 3200, image: "assets/images/airpods.png"),
       ],
     ),
     Category(

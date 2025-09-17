@@ -39,19 +39,25 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home,
+            color: Theme.of(context).iconTheme.color,
+            ),            
             label: 'Home',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search,
+            color: Theme.of(context).iconTheme.color,
+            ),
             label: 'Search',
           ),
           BottomNavigationBarItem(
             icon: Stack(
               clipBehavior: Clip.none,
               children: [
-                const Icon(Icons.shopping_cart),
+                Icon(Icons.shopping_cart,
+                color: Theme.of(context).iconTheme.color,
+                ),
                 if (cartProvider.itemCount > 0)
                   Positioned(
                     right: -6,
@@ -81,8 +87,10 @@ class _MainScreenState extends State<MainScreen> {
               ,
             label: 'Cart',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite,
+            color: Theme.of(context).iconTheme.color,
+            ),
             label: 'Favourites',
           ),
           
