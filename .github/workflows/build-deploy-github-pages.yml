@@ -33,6 +33,17 @@ jobs:
           cd e_commerce
           flutter build web --release --base-href /${{ github.event.repository.name }}/
 
+      - name: Verify build output
+        run: |
+          ls -la e_commerce/build/web/
+          echo "Build files count: $(find e_commerce/build/web -type f | wc -l)"
+
+      - name: Setup SPA routing for GitHub Pages
+        run: |
+          cd e_commerce/build/web
+          cp index.html 404.html
+          echo "" > .nojekyll
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/new-branch-gpt'
         uses: JamesIves/github-pages-deploy-action@v4.4.3
