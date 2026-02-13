@@ -46,8 +46,31 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/new-branch-gpt'
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
-        with:
-          branch: gh-pages
-          folder: e_commerce/build/web
+        run: |
+          # Create gh-pages branch if it doesn't exist
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Check if gh-pages exists
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "gh-pages branch exists, checking it out"
+            git checkout gh-pages
+          else
+            echo "Creating gh-pages branch"
+            git checkout --orphan gh-pages
+            git reset --hard
+          fi
+          
+          # Remove all files
+          git rm -rf . --ignore-unmatch
+          
+          # Copy build files
+          cp -r e_commerce/build/web/* .
+          
+          # Add and commit
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          
+          # Push
+          git push origin gh-pages
           cname: # Optional: uncomment and add custom domain if you have one
