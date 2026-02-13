@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               // See all Products
             },
             child: const Text(
-              "See All",
+              "HASTENS",
             ),
           ),
           ],
