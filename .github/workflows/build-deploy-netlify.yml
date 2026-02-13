@@ -1,13 +1,7 @@
 name: Build & Deploy to Netlify
 
 on:
-  push:
-    branches:
-      - main
-      - new-branch-gpt
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch: # Manual trigger only
 
 jobs:
   build-and-deploy:
