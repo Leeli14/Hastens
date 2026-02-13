@@ -35,8 +35,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/new-branch-gpt'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./e_commerce/build/web
+          branch: gh-pages
+          folder: e_commerce/build/web
           cname: # Optional: uncomment and add custom domain if you have one
